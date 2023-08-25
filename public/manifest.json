@@ -1,0 +1,15 @@
+{
+  "short_name": "SpaceX App",
+  "name": "SpaceX App C.S.",
+  "icons": [
+    {
+      "src": "spacex_logo_icon_144865.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

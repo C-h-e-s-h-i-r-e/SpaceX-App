@@ -1,0 +1,327 @@
+@import "rsuite/dist/rsuite.css";
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+body {
+  color: gray !important;
+}
+
+/* Filtry Start */
+.drp {
+  all: unset !important;
+  width: 100% !important;
+}
+
+.rs-btn {
+  padding-bottom: 10px !important;
+}
+
+.rowCheck {
+  padding-top: 6px;
+}
+
+::placeholder {
+  color: gray !important;
+  opacity: 1;
+}
+
+/* Filtry Koniec */
+
+/* Lista Start */
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Inside Modal Start */
+.modal-backdrop.fade {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+}
+
+.modal-backdrop.fade.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.btn-close {
+  background-image: url('../img/137531.png') !important;
+  background-size: 35px 35px !important;
+}
+
+.modalHeader {
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+}
+
+.image-gallery-image {
+  border-radius: 25px 25px 0px 0px;
+}
+
+.image-gallery-index {
+  border-radius: 0px 25px 0px 0px;
+}
+
+/* Inside Modal Koniec */
+
+/* Card Start */
+.card-img-left {
+  width: 50%;
+  height: 100% !important;
+  object-fit: cover !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.mainCard {
+  flex-direction: row !important;
+  display: flex !important;
+  align-items: end;
+}
+
+.mainCardBody {
+  width: 50%;
+  padding-left: 5% !important;
+  padding-bottom: 5% !important;
+}
+
+.card {
+  border-radius: 25px !important;
+}
+
+/* Card Koniec */
+/* Lista Koniec */
+
+/* Grid Areas Start */
+.colInfo1 {
+  grid-area: colInfo1;
+}
+
+.colInfo2 {
+  grid-area: colInfo2;
+}
+
+.rowCarousel {
+  grid-area: rowCarousel;
+}
+
+.rowDetails {
+  grid-area: rowDetails;
+}
+
+.colName {
+  grid-area: colName;
+}
+
+.colDate {
+  grid-area: colDate;
+}
+
+.colCheck {
+  grid-area: colCheck;
+}
+
+.colButton {
+  grid-area: colButton;
+}
+
+.card-img-left {
+  grid-area: card-img-left;
+}
+
+.cardBody {
+  grid-area: cardBody;
+}
+
+/* Grid Areas End */
+
+/* RWD Start */
+@media only screen and (max-width: 767.9px) {
+  .mainCard {
+    flex-direction: column !important;
+    align-items: start;
+  }
+
+  .card-img-left {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    border-radius: 25px 25px 0px 0px;
+  }
+
+  .mainCardBody {
+    text-align: left;
+    justify-content: left;
+    padding-left: 10% !important;
+    padding-bottom: 10% !important;
+  }
+
+  .filters {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "colName"
+      "colDate"
+      "colCheck"
+      "colButton";
+  }
+
+  .mainCard {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "card-img-left"
+      "cardBody";
+  }
+
+  .modalBody {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "colInfo1"
+      "colInfo2"
+      "rowCarousel"
+      "rowDetails";
+  }
+
+  .image-gallery-thumbnails {
+    display: none;
+  }
+
+  .image-gallery-index {
+    position: relative;
+    line-height: 0;
+    text-align: center;
+    background: none;
+    color: gray;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-weight: bold;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199.9px) {
+
+  .filters {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "colName colDate"
+      "colCheck colButton";
+  }
+
+  .mainCard {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "card-img-left cardBody";
+  }
+
+  .modalBody {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "colInfo1 colInfo2"
+      "rowCarousel rowCarousel"
+      "rowDetails rowDetails";
+  }
+
+  .colInfo1 .card {
+    margin-right: 2% !important;
+    height: 100% !important;
+  }
+
+  .colInfo2 .card {
+    margin-left: 2% !important;
+    height: 100% !important;
+  }
+
+  .image-gallery-thumbnails {
+    display: none;
+  }
+
+  .image-gallery-index {
+    position: relative;
+    text-align: center;
+    background: none;
+    color: gray;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-weight: bold;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .filters {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "colName colDate colCheck colButton";
+  }
+
+  .filters.row {
+    justify-content: end !important;
+  }
+
+  .mainCard {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "card-img-left cardBody";
+
+  }
+
+  .modalBody {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "colInfo1 colInfo2"
+      "rowCarousel rowCarousel"
+      "rowDetails rowDetails";
+  }
+
+  .colInfo1 .card {
+    margin-right: 2% !important;
+    height: 100% !important;
+  }
+
+  .colInfo2 .card {
+    margin-left: 2% !important;
+    height: 100% !important;
+  }
+
+  .image-gallery-index {
+    position: relative;
+    text-align: center;
+    background: none;
+    color: gray;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-weight: bold;
+  }
+
+  .image-gallery-image {
+    display: inline !important;
+    object-fit: contain !important;
+    background-color: rgb(244, 242, 242);
+  }
+
+}
+
+/* RWD End */
